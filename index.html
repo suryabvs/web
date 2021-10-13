@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>login</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+
+<style type="text/css">
+
+body{
+background-color:#000000;
+color:white;
+}
+
+.profile{
+border:10px solid blue;
+height:99px;
+width:100px;
+border-radius:100px;
+overflow:hidden;
+margin-left:120px;
+margin-top:50px;
+}
+
+.login{
+border:5px solid blue;
+padding:10px;
+background-color:white;
+border-radius:50px;
+width:280px;
+height:auto;
+margin-left:20px;
+}
+
+input{
+border:none;
+font-size:22px;
+height:50px;
+padding-left:20px;
+width:230px;
+background-color:black;
+color:white;
+margin:5px;
+margin-left:10px;
+border-radius:50px;
+font-weight:bold;
+}
+
+button{
+font-size:22px;
+border:none;
+border-radius:50px;
+margin-left:80px;
+background-color:#4d79ff;
+color:white;
+font-weight:bold;
+height:40px;
+width:100px;
+}
+
+.verify{
+font-size:20px;
+font-weight:bold;
+}
+
+h1{
+margin:0px;
+padding:10px;
+background-color:#4d79ff;
+color:white;
+}
+
+.footer{
+margin:0px;
+padding:10px;
+background-color:#4d79ff;
+color:white;
+}
+
+.continue{
+display:none;
+font-size:22px;
+border:none;
+border-radius:50px;
+margin-left:60px;
+background-color:#4d79ff;
+color:white;
+font-weight:bold;
+height:40px;
+width:150px;
+}
+
+a{
+text-decoration:none;
+}
+
+</style>
+
+<body>
+
+<center>
+<h1>
+<i class="fas fa-home"></i>
+</h1>
+</center>
+
+<div class="profile" id="profile">
+<img src="profile 2.png" width="100px">
+</div>
+
+<br>
+<br>
+
+<div class="login" id="login">
+<input type="text" name="username" id="input1" placeholder="username" >
+
+<br>
+<br>
+
+<input type="text" name="password" id="input2" placeholder="password" >
+
+<p id="verify" class="verify"></p>
+
+<button onclick="myfunction()" id="checking">login
+<i class="fas fa-sign-in-alt"></i>
+</button>
+
+<a href="https://suryabvs.github.io/web/vplayer.html" >
+<button class="continue" id="continue">continue
+<i class="fas fa-sign-in-alt"></i>
+</button>
+</a>
+
+</div>
+
+</body>
+
+<br>
+<br>
+<br>
+<br>
+
+<b>
+<p class="footer">copyright © 2021-surya, BVS.All rights reserved</p>
+</b>
+
+</html>
+
+<script type="text/javascript">
+
+function myfunction(){
+
+var a = document.getElementById("input1").value;
+var b = document.getElementById("input2").value;
+var x = "surya"
+var y = "123"
+
+if(a==x&b==y){
+
+document.getElementById("verify").innerHTML = "* sucessfully";
+document.getElementById("verify").style.color = "green";
+document.getElementById("profile").style.border = "10px solid #66ff66";
+document.getElementById("login").style.border = "5px solid #66ff66";
+document.getElementById("checking").style.display = "none";
+document.getElementById("continue").style.display = "block";
+
+}
+
+else{
+
+document.getElementById("verify").innerHTML = "* incorrect username or password";
+document.getElementById("verify").style.color = "red";
+document.getElementById("profile").style.border = "10px solid #ff5c33";
+document.getElementById("login").style.border = "5px solid #ff5c33";
+
+}
+}
+
+</script>
